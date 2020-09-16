@@ -39,7 +39,7 @@ middlewareObj.checkCommentOwnership = (req, res, next) => {
 				req.flash('error', 'Something went wrong...');
 				res.redirect('back');
 			} else {
-				if (!foundCampground) {
+				if (!foundComment) {
 					req.flash('error', 'Item not found.');
 					return res.redirect('back');
 				}
