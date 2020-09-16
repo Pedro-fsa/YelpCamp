@@ -19,7 +19,7 @@ let commentRoutes = require('./routes/comments'),
 //mongodb://localhost:27017/yelp_camp_v12
 //mongodb+srv://Alacer:<password>@cluster0.b9iuw.mongodb.net/<dbname>?retryWrites=true&w=majority
 mongoose
-	.connect('mongodb+srv://Alacer:4YJVOsFytMa5pU5F@cluster0.b9iuw.mongodb.net/yelpcamp?retryWrites=true&w=majority', {
+	.connect(process.env.DATABASEURL, {
 		useNewUrlParser: true,
 		useUnifiedTopology: true
 	})
